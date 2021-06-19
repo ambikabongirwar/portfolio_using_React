@@ -1,17 +1,14 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar.js";
-import Title from "./components/title.js";
-import About from "./components/About.js";
 import Footer from "./components/Footer.js";
-import ProjectSection from "./components/projectSection";
-import BlogSection from "./components/blogSection";
-import SkillStack from "./components/skillSection";
-import RecommendationSection from "./components/recommendationSection";
 import Contact from "./components/Contact";
 import WriteRecommendation from "./components/WriteRecommendation";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import NotFound from "./components/NotFound";
+import ProjectPage from "./components/ProjectPage";
+import BlogPage from "./components/BlogPage";
+import HomePage from "./components/HomePage";
 //import RecommendationModal from "./components/reccomendationAlert";
 
 function App() {
@@ -20,12 +17,7 @@ function App() {
             <Navbar />;
             <Switch>
                 <Route exact path = "/">
-                    <Title name = "Ambika Bongirwar"/>;
-                    <RecommendationSection />
-                    <SkillStack />
-                    <ProjectSection />
-                    <About />
-                    <BlogSection />
+                    <HomePage />
                 </Route>
                 <Route exact path = "/contact">
                     <Contact />
@@ -33,6 +25,8 @@ function App() {
                 <Route exact path = "/write-a-recommendation">
                     <WriteRecommendation />
                 </Route>
+                <Route exact path = "/project/:id" component = {ProjectPage}></Route>
+                <Route exact path = "/blog/:id" component = {BlogPage}></Route>
                 <Route component = {NotFound} />
             </Switch>
             <Footer />
