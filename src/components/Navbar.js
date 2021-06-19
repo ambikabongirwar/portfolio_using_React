@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand text-uppercase text-info px-5 fw-bold" href="/">Ambika Bongirwar</a>
+                <a className="navbar-brand text-uppercase text-info px-4 fw-bold" href="/">Ambika Bongirwar</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
@@ -20,7 +21,7 @@ function Navbar() {
                             <a className="nav-link" href="/">Blogs</a>
                         </li>
                         <li className="nav-item mx-3">
-                            <button className = "btn btn-sm btn-outline-info"><a className="nav-link" href="/">Contact me</a></button>
+                            <button className = "btn btn-sm btn-outline-info"><Link className="nav-link" to = "/contact">Contact me</Link></button>
                         </li>
                     </ul>
                 </div>

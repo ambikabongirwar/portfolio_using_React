@@ -1,20 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Linkedin, Github, Envelope } from 'react-bootstrap-icons';
+import { Linkedin, Github, Envelope, HeartFill } from 'react-bootstrap-icons';
 
 function Footer() {
     return(
         <footer>
             <div className = "container-fluid bg-dark text-white text-center mt-5 py-5">
                 <h1 className = "text-white">Interested in working with me?</h1>
-                <button type = "button" className = "btn btn-outline-light">Let's talk</button>
+                <Link to = "/contact" ><button type = "button" className = "btn btn-outline-light">Let's talk</button></Link>
                 <div className = "row text-center align-items-center">
                     <div className = "col-12 col-md-4 my-5">
                         <h5 className = "text-info">More Links</h5>
                         <a href = "/" className = "text-white">Blogs</a><br />
-                        <a href = "/" className = "text-white">Home</a><br />
-                        <a href = "/" className = "text-white">Contact me</a><br />
-                        <a href = "/" className = "text-white">Write a recommendation <i className = "fa fa-heart"></i></a>
+                        <Link to = "/" className = "text-white">Home</Link><br />
+                        <Link to = "/contact" className = "text-white">Contact me</Link><br />
+                        <a href = "/" className = "text-white">Write a recommendation <HeartFill size = {15}/></a>
                     </div>
 
                     <div className = "col-12 col-md-4 my-5">

@@ -39,7 +39,7 @@ function BlogSection() {
                 </div>
                 ))}
             </div>
-            <a href = "/" className = "text-right">
+            <a href = "/" className = "float-right">
                 <h5>See my blogs
                   <ArrowRight className="m-1" color="royalblue" size = {20}/>
                 </h5>
