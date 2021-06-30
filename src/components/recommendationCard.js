@@ -5,11 +5,11 @@ import {v4 as uuid} from "uuid";
 import {Modal} from 'react-bootstrap';
 
 function FormatTitle(props) {
-    return (props.title).length > 35 ? (props.title).slice(0, 35) + "..." : props.title;
+    return (props.message).length > 35 ? (props.message).slice(0, 35) + "..." : props.message;
 }
 
 function RecommendationCard(props) {
-    const{title, excerpt} = props.recommendation;
+    const{name, company, designation, message} = props.recommendation;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -23,16 +23,18 @@ function RecommendationCard(props) {
             <div onClick = {handleShow}>
                 <div className = "card shadow" key = {uuid()}>
                     <div className = "card-body">
-                        <h5> <FormatTitle title = {title}/> </h5>
-                        <p> {excerpt} </p>
+                        <h5> <FormatTitle message = {message}/> </h5>
+                        <p> {name} </p>
+                        <p> {designation} at {company} </p>
                     </div>
                 </div>
             </div>
 
             <Modal show = {show} onHide = {handleClose}>
                 <Modal.Body >
-                    <h5 className = "text-center"> {title} </h5>
-                    <p className = "text-center"> {excerpt} </p>
+                    <h5 className = "text-center"> {message} </h5>
+                    <p className = "text-center"> {name} </p>
+                    <p> {designation} at {company} </p>
                 </Modal.Body>
             </Modal>
         </div>

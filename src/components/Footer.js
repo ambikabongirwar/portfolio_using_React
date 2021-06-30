@@ -15,7 +15,7 @@ function Footer() {
                         <a href = "/" className = "text-white">Blogs</a><br />
                         <Link to = "/" className = "text-white">Home</Link><br />
                         <Link to = "/contact" className = "text-white">Contact me</Link><br />
-                        <a href = "/" className = "text-white">Write a recommendation <HeartFill size = {15}/></a>
+                        <Link to = "/write-a-recommendation" className = "text-white">Write a recommendation <HeartFill size = {15}/></Link>
                     </div>
 
                     <div className = "col-12 col-md-4 my-5">

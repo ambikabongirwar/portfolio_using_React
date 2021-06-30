@@ -11,7 +11,7 @@ function Skill(props) {
         else {
             starsList.push(<span key={uuid()}> * </span>);
         }
-    }
+    } 
   return (
     <div>
         <img
