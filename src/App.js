@@ -14,7 +14,7 @@ import AddBlog from "./components/AddBlog";
 import {Provider} from "./context";
 import AllProjects from "./components/AllProjects";
 import AllBlogs from "./components/AllBlogs";
-import Test from "./components/test";
+//import Test from "./components/test";
 import ScrollToTop from "./components/ScrollToTop";
 //import RecommendationModal from "./components/reccomendationAlert";
 
@@ -34,7 +34,6 @@ function App() {
                     <Route exact path = "/write-a-recommendation">
                         <WriteRecommendation />
                     </Route>
-                    <Route exact path = "/test" component = {Test} />
                     <Route exact path = "/allprojects" component = {AllProjects} />
                     <Route exact path = "/allblogs" component = {AllBlogs} />
                     <Route exact path = "/blog/add" component = {AddBlog} />

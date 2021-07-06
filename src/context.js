@@ -3,9 +3,12 @@ import React, {Component} from "react";
 const Context = React.createContext();
 
 export class Provider extends Component {
+    /*addProjectHandler = (newProject) => {
+        console.log(newProject);
+    }*/
     addProjectHandler = (newProject) => {
         this.setState({
-            projects: [newProject, ...this.state.projects],
+            projects: newProject,
         })
     }
     /*handler = (action, newObject) => {
